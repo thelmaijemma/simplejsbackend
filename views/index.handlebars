@@ -1,0 +1,25 @@
+<h1>The views folder/ handlebars is usually an alternative to API routes serving json to a front end like react</h1>
+    <h2> The static view is also another option</h2>
+    <h2>To use a variable with handlebars you just use double braces</h2>
+<h2 class="text-center mb-3">{{title}}</h2>
+<ul class="list-group">
+    {{#each members}}
+    <li class="list-group-item">
+        {{this.name}}: {{this.email}}
+    </li>
+    {{/each}}
+</ul>
+
+<form action="/api/members" method="POST" class="mb-4">
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" class="form-control">
+</div>
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" class="form-control">
+</div>
+<input type="submit" value="Add Member" class="btn btn-primary btn-block">
+</form>
+
+<a href="/api/members" class="btn btn-light mt-4">Visit API</a>
